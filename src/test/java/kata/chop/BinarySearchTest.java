@@ -7,8 +7,8 @@ import static java.lang.String.format;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-import java.util.Collection;
 import java.util.Collections;
+import java.util.List;
 
 import static java.util.Arrays.asList;
 
@@ -41,7 +41,7 @@ public class BinarySearchTest {
     }
 
     @Test(dataProvider = "test1")
-    public void testChop(Integer indexFinded, Integer indexToFind, Collection<Integer> listIntoSearch) {
+    public void testChop(Integer indexFinded, Integer indexToFind, List<Integer> listIntoSearch) {
         assertThat(
                 format("%s is into %s in index %s", indexToFind, listIntoSearch, indexFinded),
                 new BinarySearch ().chop(indexToFind, listIntoSearch),
